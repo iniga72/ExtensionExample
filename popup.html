@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chrome Extension Example</title>
+    <link href="./css/style.css" rel='stylesheet' type="text/css">
+    <script src="./js/popup.js"></script>
+</head>
+<body style="background: #181717">
+    <style type="text/css">
+        #name{
+            font-family: 'Google Sans';
+            color: white;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            margin-left: 4%;
+            margin-top: 5%;
+        }
+        #panel{
+            width: 325px;
+            height: 540px;
+            background-color: #181717;
+        }
+        .comm{
+            font-family: 'Google Sans';
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            color: darkgray;
+            font-size: 18px;
+            margin-left: 10%;
+            margin-bottom: 2%;
+        }
+        #info{
+            font-family: 'Google Sans';
+            color: darkgray;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            margin-left: 4.3%;
+            margin-top: 1.1%;
+            margin-bottom: 7%;
+        }
+        .edit{
+            width: 280px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            background-color: #2B2B2B;
+            font-family: 'Google Sans';
+            color: white;
+            outline: none;
+            border-radius: 3px;
+            border: 1.1px solid #2E2E2E;
+            font-size: 18px;
+            margin-bottom: 7%;
+        }
+        .send{
+            font-family: 'Google Sans';
+            color: white;
+            padding: 0;
+            margin: 0;
+            font-size: 18px;
+            width: 320px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            outline: none;
+            background-color: #2B2B2B;
+            border-radius: 3px;
+            border: 1.1px solid #2E2E2E;
+            transition-duration: 200ms;
+        }
+        .send:hover{
+            transition-duration: 300ms;
+            background: none;
+        }
+        #response{
+            background-color: #2B2B2B;
+            font-family: 'Google Sans';
+            width: 300px;
+            font-size: 16px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            color: white;
+            height: 180px;
+            margin-top: 5%;
+            max-width: 300px;
+            max-height: 180px;
+            text-align: left;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+            background-color: none;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #3D7CF1;
+            border-radius: 9em;
+            box-shadow: inset 1px 1px 10px #3D7CF1;
+        }
+    </style>
+    <body>
+    <div id="panel">
+        <div style="width: 325px; height: 10px; background: rgb(100,103,255); background: linear-gradient(90deg, rgba(100,103,255,1) 35%, rgba(20,173,255,1) 100%);"></div>
+        <h2 id="name">FeatureHack</h2>
+        <p id="info">Большие возможности</p>
+        <form id="form">
+            <p class="comm">Введите IP</p>
+            <input type="text" id="ip2" class="edit" placeholder="127.0.0.1">
+            <p class="comm">Введите команду</p>
+            <input type="text" id="cmdi" class="edit" placeholder="op FeatureHack">
+            <input type="submit" id="send" name="send" class="send">
+            <p><input type="submit" id="menu" name="menu" value="Меню" class="send"></p>
+        </form>
+        <script>
+            $("#form").submit(e => {
+              e.preventDefault();
+              // Handle form
+            });
+            </script>
+        <div id="response">
+            Opped FeatureHack
+        </div>
+    </div>
+    </body>
+<div id="popupContent"></div>
+</body>
+</html>
