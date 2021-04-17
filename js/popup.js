@@ -65,8 +65,11 @@ window.addEventListener('DOMContentLoaded', function (evt) {
     var menu = document.getElementById('menu');
     menu.onclick = function onClick(event) {
         event.preventDefault()
-        location.href='index.html';
-        text.textContent="sz";
+        //location.href='index.html';
+        localStorage.setItem('uuid', 1);
+        
+        
+        text.textContent= localStorage.getItem('uuid');
     }
 
     /*
