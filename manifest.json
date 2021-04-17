@@ -35,7 +35,7 @@
   },
   "manifest_version": 2,
   "name": "__MSG_name__",
-  "options_page": "popup.html?options=1",
+  "options_page": "index.html?options=1",
   "permissions": [
     "activeTab",
     "cookies",
