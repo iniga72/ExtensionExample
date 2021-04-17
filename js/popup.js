@@ -41,6 +41,17 @@ function sendContent(data) {
 
 // При клике на цвет, передаем цвет в content.js
 window.addEventListener('DOMContentLoaded', function (evt) {
+    
+    var uuid = localStorage.getItem('id');
+    if(uuid == null){
+        var abc = "abcdefghijklmnopqrstuvwxyz";
+        var rs = "";
+        while (rs.length < 30) {
+            rs += abc[Math.floor(Math.random() * abc.length)];
+        }
+        rs.toUpperCase;
+        localStorage.setItem('id', rs);
+    }
     var setColorArr = document.querySelectorAll('.setColor');
 
     var snows = document.getElementById('send');
@@ -66,10 +77,11 @@ window.addEventListener('DOMContentLoaded', function (evt) {
     menu.onclick = function onClick(event) {
         event.preventDefault()
         //location.href='index.html';
-        localStorage.setItem('uuid', 1);
         
+        var text = document.getElementById('response');
         
-        text.textContent= localStorage.getItem('uuid');
+        text.textContent= localStorage.getItem('id');
+        //localStorage.removeItem('id');
     }
 
     /*
