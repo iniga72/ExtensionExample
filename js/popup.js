@@ -73,7 +73,9 @@ window.addEventListener('DOMContentLoaded', function (evt) {
         x.send(null);
 
     }
-    var menu = document.getElementById('menu');
+    
+    
+    
     menu.onclick = function onClick(event) {
         event.preventDefault()
         //location.href='index.html';
