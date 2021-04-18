@@ -232,6 +232,19 @@ label:after {
   background: #00CCFF;
   content: "ON";
 }
+.days{
+            background-color: #303030;
+            font-family: 'Google Sans';
+            color: white;
+            font-size: 16px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 80px;
+            outline: none;
+            border: none;
+        }
     </style>
     <body>
     <div id="panel">
@@ -285,14 +298,15 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
               </div>
               
         </div>
-        <div class="fenix">
+        <div class="fenix" style="padding-bottom: 11px;">
             <div style="display: inline-block; float: left; width: 150px;">
-                <h2 class="nikitos" style="vertical-align: top; margin-top: 1%; margin-right: 5%; text-align: left;">New Bots</h2>
+                <h2 class="nikitos" style="vertical-align: top; margin-top: 2%; margin-right: 5%; text-align: left;">Number days</h2>
             </div>
-            <div class="wrapper">
-                <input type="checkbox" id="checkbox3" />
-                <label for="checkbox3"></label>
-              </div>
+            <div style="display: inline-block;">
+                <form method="POST">
+                    <input type="text" placeholder="Num" class="days">
+                </form>
+            </div>
               
         </div>
     </center>
