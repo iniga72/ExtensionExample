@@ -161,6 +161,18 @@
             float: right;
             
         }
+        .but{
+            background: rgb(100,103,255); 
+            background: linear-gradient(90deg, rgba(100,103,255,1) 35%, rgba(20,173,255,1) 100%);
+            color: white;
+            font-size: 16px;
+            padding-left: 76px;
+            padding-right: 76px;
+            padding-top: 5px;
+            padding-bottom: 7px;
+            border-radius: 6px;
+            
+        }
         .rustem{
             background: #1E1E1E;
             width: 310px;
@@ -200,6 +212,50 @@
             float: right;
         }
         
+
+
+
+.wrapper {
+  width: 320px;
+  margin-left: 2%;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #1E1E1E;
+  padding: 3px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+.progress-bar-fill {
+  display: block;
+  height: 22px;
+  background: rgb(100,103,255); 
+  background: linear-gradient(90deg, rgba(100,103,255,1) 35%, rgba(20,173,255,1) 100%);
+  border-radius: 3px;
+  transition: width 500ms ease-in-out;
+}
+#obn{
+
+    font-family: 'Google Sans';
+    color: white;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1%;
+    margin-left: 2.5%;
+    margin-top: 6%;
+}
+#don{
+
+font-family: 'Google Sans';
+color: darkgray;
+padding: 0;
+margin: 0;
+font-size: 16px;
+display: inline-block;
+margin-top: 2%;
+}
     </style>
     <body>
     <div id="panel">
@@ -219,20 +275,22 @@
             <a href="checker.html" class="butik">Перейти</a>
             <a href="setting.html" class="butikj">Оплатить доступ</a>
         </div>
-    </center>
-        <div class="rustem">
-            <div class="lef"></div>
-            <h2 class="stat">Successful attempts</h2>
-            <h2 class="count">24</h2>
-            
-        </div>
-        <div class="rustem">
-            <div class="lef"></div>
-            <h2 class="stat">Failed attempts</h2>
-            
-            
-        </div>
     
+        <a href="static.html" class="but">Посмотреть статистику</a>
+        
+    </center>
+    <h2 id="obn">На обновление программы</h2>
+    <div class="wrapper">
+        <div class="progress-bar">
+         <span class="progress-bar-fill" style="width: 50%"></span>
+         
+        </div>
+       </div>
+       <div style="margin: 0; padding: 0;">
+        <p id="don" style="float: left; margin-left: 2.6%;">Собрано <span style="color: white;">0₽</span></p>
+        <p id="don" style="float: right; margin-right: 2%;">Нужно <span style="color: white;">15000₽</span></p>
+       </div>
+       
     </div>
     </body>
 <div id="popupContent"></div>
