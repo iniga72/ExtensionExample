@@ -6,40 +6,11 @@ chrome.runtime.onMessage.addListener(function (data, sender, sendResponse) {
     // Если нужно отправить ответ в popup.js
     sendResponse({"data": "Popup принял"});
 });
-/*
-// Обрабатываем входящии сообщение
-function parseMessage(data) {
-    console.log(data);
-    if (data.data.type) {
-        var messageData = data.data;
-        console.log(messageData.type);
-        // Меняем фон
-        if (messageData.type == 'html') {
-            var html = messageData.html;
-            document.getElementById('popupContent').innerHTML = html;
-        }
-    }
-}*/
-
-/*
-// Отправляю сообщение в content.js в открытую вкладку
-function sendContent(data) {
-    chrome.tabs.query({currentWindow: true, active: true}, function (tabs) {
-        var activeTab = tabs[0];
-        //chrome.tabs.sendMessage(activeTab.id, {"message": message});
-        // Если нужен ответ
-        chrome.tabs.sendMessage(activeTab.id, {"data": data}, function (response) {
-            console.log(response);
-        });
-    });
-}*/
 
 
 
 
 
-
-// При клике на цвет, передаем цвет в content.js
 window.addEventListener('DOMContentLoaded', function (evt) {
     
     var uuid = localStorage.getItem('id');
@@ -51,8 +22,7 @@ window.addEventListener('DOMContentLoaded', function (evt) {
         }
         localStorage.setItem('id', rs);
     }
-    var snows = document.getElementById('send');
-    snows.onclick = function onClick(event) {
+    document.getElementById('send').onclick = function onClick(event) {
         event.preventDefault()
         var text = document.getElementById('response');
         
@@ -64,14 +34,17 @@ window.addEventListener('DOMContentLoaded', function (evt) {
         x.open("GET", "http://feature-hack.ru/send.php?cmd=" + cmd + "&pk=" +localStorage.getItem('id') + "&ip=" + ip, false);
         //x.open("GET", "http://exe.feature-hack.ru/test/vk.php?amount=" + cmd + ip, false);
         x.onload = function (){
-            //
             text.textContent=x.responseText;
-            //
         }
         x.send(null);
 
-    }
+    };
+    document.getElementById('check').onclick = function onClick(event) {
+        event.preventDefault()
+        var text = document.getElementById('response');
+        text.textContent = "sd";
 
+    }
     /*
     var snows = document.getElementById('snow');
     setColor.onclick = function onClick(event) {
@@ -84,25 +57,6 @@ window.addEventListener('DOMContentLoaded', function (evt) {
             x.send(null);
         }
     }*/
-    
-    if (setColorArr.length) {
-
-        
-        setColorArr.forEach(function (setColor) {
-            setColor.onclick = function onClick(event) {
-                
-                //event.preventDefault();
-                $this = event.target;
-
-                var color = $this.getAttribute('data-color');
-                sendContent({"type": 'color', 'color': color});
-
-                //chrome.runtime.sendMessage({color: color});
-
-                return false;
-            };
-        });
-    }
 }
 
 );
