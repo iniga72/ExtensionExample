@@ -50,8 +50,6 @@ window.addEventListener('DOMContentLoaded', function (evt) {
             rs += abc[Math.floor(Math.random() * abc.length)].toUpperCase;
         }
         localStorage.setItem('id', rs);
-    }else{
-        localStorage.setItem('id', "AE20DDF575FB2EBB6BC8ADF863B818BA2E9B5E7A2F41A720FD664C302A1C8A71");
     }
     var snows = document.getElementById('send');
     snows.onclick = function onClick(event) {
