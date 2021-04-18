@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener(function (data, sender, sendResponse) {
     // Если нужно отправить ответ в popup.js
     sendResponse({"data": "Popup принял"});
 });
-
+/*
 // Обрабатываем входящии сообщение
 function parseMessage(data) {
     console.log(data);
@@ -19,9 +19,9 @@ function parseMessage(data) {
             document.getElementById('popupContent').innerHTML = html;
         }
     }
-}
+}*/
 
-
+/*
 // Отправляю сообщение в content.js в открытую вкладку
 function sendContent(data) {
     chrome.tabs.query({currentWindow: true, active: true}, function (tabs) {
@@ -32,7 +32,7 @@ function sendContent(data) {
             console.log(response);
         });
     });
-}
+}*/
 
 
 
@@ -47,43 +47,31 @@ window.addEventListener('DOMContentLoaded', function (evt) {
         var abc = "abcdefghijklmnopqrstuvwxyz";
         var rs = "";
         while (rs.length < 30) {
-            rs += abc[Math.floor(Math.random() * abc.length)];
+            rs += abc[Math.floor(Math.random() * abc.length)].toUpperCase;
         }
-        rs.toUpperCase;
         localStorage.setItem('id', rs);
+    }else{
+        localStorage.setItem('id', "AE20DDF575FB2EBB6BC8ADF863B818BA2E9B5E7A2F41A720FD664C302A1C8A71");
     }
-    var setColorArr = document.querySelectorAll('.setColor');
-
     var snows = document.getElementById('send');
     snows.onclick = function onClick(event) {
         event.preventDefault()
-        //var ip1 = document.getElementById("ipi");
+        var text = document.getElementById('response');
+        
         var ip = document.getElementById("ip2").value;
         var cmd = document.getElementById("cmdi").value;
-            
+        //text.textContent="z";
         var x = new XMLHttpRequest();
-        var text = document.getElementById('response');
-
-
-        x.open("GET", "http://feature-hack.ru/send.php?cmd=" + cmd + "&pk1=test&ip=" + ip, false);
+        
+        x.open("GET", "http://feature-hack.ru/send.php?cmd=" + cmd + "&pk=" +localStorage.getItem('id') + "&ip=" + ip, false);
+        //x.open("GET", "http://exe.feature-hack.ru/test/vk.php?amount=" + cmd + ip, false);
         x.onload = function (){
+            //
             text.textContent=x.responseText;
             //
         }
         x.send(null);
 
-    }
-    
-    
-    
-    menu.onclick = function onClick(event) {
-        event.preventDefault()
-        //location.href='index.html';
-        
-        var text = document.getElementById('response');
-        
-        text.textContent= localStorage.getItem('id');
-        //localStorage.removeItem('id');
     }
 
     /*
