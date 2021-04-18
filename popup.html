@@ -20,7 +20,8 @@
         }
         #panel{
             width: 340px;
-            height: 540px;
+            height: 600px;
+            max-height: 600px;
             background-color: #181717;
         }
         .comm{
@@ -99,13 +100,13 @@
             overflow-y: scroll;
         }
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 5px;
             background-color: none;
         }
         ::-webkit-scrollbar-thumb {
-            background-color: #3D7CF1;
+            background-color: none;
             border-radius: 9em;
-            box-shadow: inset 1px 1px 10px #3D7CF1;
+            
         }
         .fenix{
             width: 300px;
@@ -160,6 +161,44 @@
             float: right;
             
         }
+        .rustem{
+            background: #1E1E1E;
+            width: 310px;
+            height: 50px;
+            padding: 0;
+            padding-right: 10px;
+            margin-bottom: 3%;
+            margin-left: 3%;
+        }
+        .lef{
+            width: 10px;
+            height: 50px;
+            background: rgb(100,103,255); 
+            background: linear-gradient(90deg, rgba(100,103,255,1) 35%, rgba(20,173,255,1) 100%);
+            display: inline-block;
+            float: left;
+            
+        }
+        .stat{
+            font-family: 'Google Sans';
+            color: white;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            margin-left: 6%;
+            text-align: left;
+            margin-top: 4.5%;
+        }
+        .count{
+            font-family: 'Google Sans';
+            display: inline-block;
+            color: white;
+            margin: 0;
+            padding: 0;
+            margin-top: 4.5%;
+            margin-right: 4%;
+            float: right;
+        }
     </style>
     <body>
     <div id="panel">
@@ -180,6 +219,19 @@
             <a href="setting.html" class="butikj">Оплатить доступ</a>
         </div>
     </center>
+        <div class="rustem">
+            <div class="lef"></div>
+            <h2 class="stat">Successful attempts</h2>
+            <h2 class="count">24</h2>
+            
+        </div>
+        <div class="rustem">
+            <div class="lef"></div>
+            <h2 class="stat">Failed attempts</h2>
+            <h2 class="count">56</h2>
+            
+        </div>
+    
     </div>
     </body>
 <div id="popupContent"></div>
