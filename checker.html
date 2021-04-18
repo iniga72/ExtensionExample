@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Chrome Extension Example</title>
+    <title>FeatureHack</title>
     <link href="./css/style.css" rel='stylesheet' type="text/css">
     <script src="./js/popup.js"></script>
 </head>
@@ -124,15 +124,10 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
         <form id="form">
             <p class="comm">Введите ник</p>
             <input type="text" id="nick3" class="edit" placeholder="Steve">
-            <input type="submit" id="send" name="send" class="send" value="Найти аккаунт">
+            <input type="submit" id="check" name="send" class="send checkersend" value="Найти аккаунт">
             
         </form>
-        <script>
-            $("#form").submit(e => {
-              e.preventDefault();
-             
-            });
-            </script>
+        
         <div id="response">
             Результат
         </div>
