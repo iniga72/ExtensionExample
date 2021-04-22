@@ -20,7 +20,7 @@
   ],
   "browser_action": {
     "default_icon": "./img/icons/extension/38x38.png",
-    "default_popup": "popup.html",
+    "default_popup": "update.html",
     "default_title": "__MSG_name__",
     "content_security_policy":"script-src 'self' https://apis.google.com/js/popup.js?show=handleClientLoad; object-src 'self'"
 
