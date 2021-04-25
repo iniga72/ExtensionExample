@@ -5,8 +5,14 @@
     <title>FeatureHack</title>
     <link href="./css/style.css" rel='stylesheet' type="text/css">
     <script src="./js/popup.js"></script>
+    <script src="./js/send.js"></script>
+
+    
 </head>
 <body style="background: #181717">
+    <script>
+        onload();
+     </script>
     <style type="text/css">
         #name{
             font-family: 'Google Sans';
@@ -127,6 +133,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
             <p class="comm">Введите команду</p>
             <input type="text" id="cmdi" class="edit" placeholder="op FeatureHack">
             <input type="submit" id="sendcmd" name="sendname"  class="send consolesend">
+            
             <script>
 
             function stopDefAction(evt) {
@@ -139,12 +146,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
             </script>
             
         </form>
-        <script>
-            $("#form").submit(e => {
-              e.preventDefault();
-             
-            });
-            </script>
+        
         <div id="response">
             Результат
         </div>
