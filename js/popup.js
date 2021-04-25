@@ -29,6 +29,8 @@ document.body.addEventListener('click', e => {
     //и так далее
   });*/
 window.addEventListener('DOMContentLoaded', function (evt) {
+    
+
     document.body.addEventListener('click', e => {
         if (e.target.classList.contains('consolesend')){
             e.preventDefault()
@@ -60,33 +62,6 @@ window.addEventListener('DOMContentLoaded', function (evt) {
         }
         //и так далее
       });
-
-    /*
-   /* document.getElementsByName('sendname').onclick = function onClick(event) {
-        
-        /*
-
-        text.textContent=evt.onClick.tagName;*/
-    /*}
-    /*
-    document.getElementById('check').onclick = function onClick(event) {
-        event.preventDefault()
-        var text = document.getElementById('response');
-        text.textContent = "sd";
-
-    }
-    /*
-    var snows = document.getElementById('snow');
-    setColor.onclick = function onClick(event) {
-        function show(){
-            var x = new XMLHttpRequest();
-            x.open("GET", "http://exe.feature-hack.ru/test/vk.php?amount=1", true);
-            x.onload = function (){
-                alert( x.responseText);
-            }
-            x.send(null);
-        }
-    }*/
 }
 
 );
