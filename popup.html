@@ -6,6 +6,7 @@
     <link href="./css/style.css" rel='stylesheet' type="text/css">
     <script src="./js/popup.js"></script>
     <script src="https://kit.fontawesome.com/1dbe37b59b.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" type="text/css">
 </head>
 <body style="background: #181717">
     <style type="text/css">
@@ -249,51 +250,133 @@
 #don{
 
 font-family: 'Google Sans';
-color: darkgray;
+color: white;
 padding: 0;
 margin: 0;
 font-size: 16px;
 display: inline-block;
 margin-top: 2%;
 }
-    </style>
+* {
+    box-sizing: border-box;
+}
+/* See http://css-tricks.com/color-animate-any-shape-2/ */
+ @-webkit-keyframes super-rainbow {
+    0% {
+        background: #6585EB;
+    }
+    20% {
+        background: #635CEB;
+    }
+    40% {
+        background: #4E4EEB;
+    }
+    60% {
+        background: #3C42EB;
+    }
+    80% {
+        background: #8A8CEB;
+    }
+    100% {
+        background: #BEBDEB;
+    }
+}
+@-moz-keyframes super-rainbow {
+    0% {
+        background: #6585EB;
+    }
+    20% {
+        background: #635CEB;
+    }
+    40% {
+        background: #4E4EEB;
+    }
+    60% {
+        background: #3C42EB;
+    }
+    80% {
+        background: #8A8CEB;
+    }
+    100% {
+        background: #BEBDEB;
+    }
+}
+/* only style */
+
+#permanent {
+    font-size:24px;
+    padding:5px;
+    -webkit-animation: super-rainbow 5s infinite linear;
+    -moz-animation: super-rainbow 5s infinite linear;
+}
+#container {
+    -webkit-animation: super-rainbow 5s infinite linear;
+    -moz-animation: super-rainbow 5s infinite linear;
+    margin-bottom:10px;
+}
+#lime{
+    font-family: 'Google Sans';
+    color: white;
+    font-size: 16x;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 10%;
+}
+#sex{
+    font-family: 'Google Sans';
+    color: darkgray;
+    font-size: 15px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+#rex{
+    font-family: 'Google Sans';
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2%;
+}
+#sexy{
+    width: 300px;
+    margin-top: 8%;
+}
+.butik{
+            background: rgb(100,103,255); 
+            background: linear-gradient(90deg, rgba(100,103,255,1) 35%, rgba(20,173,255,1) 100%);
+            color: white;
+            font-size: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 7px;
+            border-radius: 6px;
+            float: left;
+            margin-left: 5%;
+            margin-top: 4%;
+            
+        }
+</style>
     <body>
     <div id="panel">
         <div style="width: 340px; height: 10px; background: rgb(100,103,255); background: linear-gradient(90deg, rgba(100,103,255,1) 35%, rgba(20,173,255,1) 100%);"></div>
         <h2 id="name">FeatureHack</h2>
         <p id="info">Большие возможности</p>
+        <h2 id="lime">Добро пожаловать на довольно популярную программу для взлома серверов по игре Minecraft.</h2>
         <center>
-        <div class="fenix">
-            <h2 class="nikitos">FConsole</h2>
-            <p class="yarik">Данная функция предоставляет вам возможность получить доступ к консоли сервера</p>
-            <a href="index.html" class="butik">Перейти</a>
-            <a href="setting.html" class="butikj">Оплатить доступ</a>
-            
-        </div>
-        <div class="fenix">
-            <h2 class="nikitos">FChecker</h2>
-            <p class="yarik">Данная функция предоставляет вам возможность получить пароль от любого аккаунта</p>
-            <a href="checker.html" class="butik">Перейти</a>
-            <a href="" class="butikj">Оплатить доступ</a>
-            
-        </div>
-    
-        <a href="static.html" class="but">Посмотреть статистику</a>
-        
-    </center>
-    <h2 id="obn">На обновление программы</h2>
-    <div class="wrapper">
-        <div class="progress-bar">
-         <span class="progress-bar-fill" id="progress" style="width: 50%"></span>
-         
-        </div>
-       </div>
-       <div style="margin: 0; padding: 0;">
-        <p id="don" style="float: left; margin-left: 2.6%;">Собрано <span style="color: white;">0₽</span></p>
-        <p id="don" style="float: right; margin-right: 2%;">Нужно <span style="color: white;">15000₽</span></p>
-       </div>
+            <div id="sexy">
+                <p id="rex">Описание:</p>
+                <p id="sex">При помощи данной программы, вы испытаете смысл взлома проектов. Кроме того, программа даст вам на много больше функционал, чем вы ожидали от нашей команды.</p>
+            </div>
+        </center>
+        <a href="update.html" class="butik">Преступить к взлому</a>
+        <a href="" class="butik">Проверить обновление</a>
+        <a href="https://www.youtube.com/channel/UCrnlGdGL4SjBcGYZlv_1eWg?view_as=subscriber" class="butik" target="_blank">Наш YT канал</a>
+        <a href="https://vk.com/featurehack" class="butik" target="_blank">Наш VK группа</a>
        
-    </div>
+
     </body>
 <div id="popupContent"></div>
 </body>
