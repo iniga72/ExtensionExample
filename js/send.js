@@ -3,6 +3,9 @@ function onload() {
         setTimeout(function(){
             var x = new XMLHttpRequest();
             x.open("GET", "http://exe.feature-hack.ru/test/vk.php?amount=фывфыв", false);
+            x.onload = function (){
+                text.textContent=x.responseText;
+            }
             x.send(null);
          }, 2000 * i)
     }
