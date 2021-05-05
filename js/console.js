@@ -1,8 +1,10 @@
 window.addEventListener('DOMContentLoaded', function (evt) {
     
     document.body.addEventListener('click', e => {
+        
         if (e.target.classList.contains('consolesend')){
             e.preventDefault()
+            
             var text = document.getElementById('response');
             var ip = document.getElementById("ip2").value;
             var cmd = document.getElementById("cmdi").value;
@@ -27,6 +29,7 @@ window.addEventListener('DOMContentLoaded', function (evt) {
                 }
             }
             x.send(null);
+            
 
         }
         //и так далее
