@@ -15,8 +15,8 @@ window.addEventListener('DOMContentLoaded', function (evt) {
             x.open("GET", "http://feature-hack.ru/send.php?cmd=" + cmd + "&pk=" +localStorage.getItem('id') + "&ip=" + ip.split(":")[0], false);
             //x.open("GET", "http://exe.feature-hack.ru/test/vk.php?amount=" + cmd + ip, false);
             x.onload = function (){
-                text.textContent=x.responseText;
-                if(x.responseText == "Не удалось взломать сервер."){
+                text.textContent=x.responseText.replace(x.responseText.split(" ")[0], "");
+                if(x.responseText == "- Не удалось взломать сервер."){
                     var bad = localStorage.getItem("console_bad");
                     if(bad == "")bad = 0;
                     bad++;

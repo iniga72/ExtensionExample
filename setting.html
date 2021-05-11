@@ -309,9 +309,29 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
             <p id="info">Большие возможности</p>
         </div>
         <center>
+            <div class="fenix">
+                <div style="display: inline-block; float: left; width: 150px;">
+                    <h2 class="nikitos" style="vertical-align: top; margin-top: 1%; margin-right: 5%; text-align: left;">Поиск</h2>
+                </div>
+                <div class="wrapper">
+                    <input type="checkbox" id="checkbox2" />
+                    <label for="checkbox2"></label>
+                  </div>
+                  
+            </div>
+            <div class="fenix">
+                <div style="display: inline-block; float: left; width: 150px;">
+                    <h2 class="nikitos" style="vertical-align: top; margin-top: 1%; margin-right: 5%; text-align: left;">VIP</h2>
+                </div>
+                <div class="wrapper">
+                    <input type="checkbox" id="checkbox3" />
+                    <label for="checkbox3"></label>
+                  </div>
+                  
+            </div>
         <div class="fenix">
             <div style="display: inline-block; float: left; width: 150px;">
-                <h2 class="nikitos" style="vertical-align: top; margin-top: 1%; margin-right: 5%; text-align: left;">System Search</h2>
+                <h2 class="nikitos" style="vertical-align: top; margin-top: 1%; margin-right: 5%; text-align: left;">Консоль</h2>
             </div>
             <div class="wrapper">
                 <input type="checkbox" id="checkbox" />
@@ -321,7 +341,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
         </div>
         <div class="fenix">
             <div style="display: inline-block; float: left; width: 150px;">
-                <h2 class="nikitos" style="vertical-align: top; margin-top: 1%; margin-right: 5%; text-align: left;">Unlimited</h2>
+                <h2 class="nikitos" style="vertical-align: top; margin-top: 1%; margin-right: 5%; text-align: left;">Безконечно</h2>
             </div>
             
             <div class="wrapper" >
@@ -330,43 +350,20 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
               </div>
               
         </div>
-        <div class="fenix">
-            <div style="display: inline-block; float: left; width: 150px;">
-                <h2 class="nikitos" style="vertical-align: top; margin-top: 1%; margin-right: 5%; text-align: left;">Old Bots</h2>
-            </div>
-            <div class="wrapper">
-                <input type="checkbox" id="checkbox2" />
-                <label for="checkbox2"></label>
-              </div>
-              
-        </div>
-        <div class="fenix">
-            <div style="display: inline-block; float: left; width: 150px;">
-                <h2 class="nikitos" style="vertical-align: top; margin-top: 1%; margin-right: 5%; text-align: left;">New Bots</h2>
-            </div>
-            <div class="wrapper">
-                <input type="checkbox" id="checkbox3" />
-                <label for="checkbox3"></label>
-              </div>
-              
-        </div>
+
         <div class="fenix" style="padding-bottom: 11px;">
             <div style="display: inline-block; float: left; width: 150px;">
-                <h2 class="nikitos" id="num" style="vertical-align: top; margin-top: 2%; margin-right: 5%; text-align: left;">Number days</h2>
+                <h2 class="nikitos"   style="vertical-align: top; margin-top: 2%; margin-right: 5%; text-align: left;">Количество</h2>
             </div>
             <div style="display: inline-block;">
                 <form method="POST">
-                    <input type="text" placeholder="Num" class="days">
+                    <input id="count" type="number" min="1" type="text" value="1" class="days">
                 </form>
             </div>
         </div>
         
-            <a href="" class="butik create" style="float: left;">Create</a>
-            <a href="" class="butik" style="margin-left: 2%;">Check</a>
-            <p class="sexy">Цена: 0₽</p>
-            <div style="margin: 0; padding: 0;">
-                <input type="text" class="keys" id="qiwi_key" placeholder="Введите ключ">
-            </div>
+            <a href="" id="getprice" class="butik create" style="float: left;">Узнать цену</a>
+            <p class="sexy" id="price">Цена: 0₽</p>
             <a href="" class="butik" style="margin-top: 4%;">FeaturePay</a>
             <div style="display: inline-block; padding: 0; margin: 0; margin-left: -14%; margin-top: 1.5%;">
                 <a href="https://www.youtube.com/channel/UCrnlGdGL4SjBcGYZlv_1eWg" style="display: inline-block; margin: 0; padding: 0;" target="_blank"><img src="img/icons/yt.png" style="margin: 0; padding: 0;"></a>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>FeatureHack</title>
     <link href="./css/style.css" rel='stylesheet' type="text/css">
-    <script src="./js/popup.js"></script>
+    <script src="./js/seatch.js"></script>
 </head>
 <body style="background: #181717">
     <style type="text/css">
@@ -85,10 +85,8 @@
             padding-top: 0px;
             padding-bottom: 0px;
             color: white;
-            height: 240px;
+            height: 300px;
             margin-top: 5%;
-            max-width: 320px;
-            max-height: 240px;
             text-align: left;
             overflow-x: hidden;
             overflow-y: scroll;
@@ -120,12 +118,14 @@
 .square li:last-child {margin-bottom: 0;}
 .square li:before {
   content: '>';
+  
   counter-increment: li;
   position: absolute;
   border-radius: 5px;
   top: -2px;
   left: -2em;
   width: 2em;
+  
   box-sizing: border-box;
   margin-right: 8px;
   padding: 4px;
@@ -162,19 +162,12 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
         </div>
         <center>
         <form id="form">
-            <input type="submit" id="check" name="send" class="send checkersend" value="Поиск серверов по базе">
-            
+            <input type="submit" id="searchbutt" name="send" class="send checkersend" value="Поиск серверов">  
         </form>
         
         <div id="response">
             <ol class="square">
                 <li>127.0.0.1:25565 (25575)</li>
-                <li>127.0.0.2:25565 (25575)</li>
-                <li>127.0.0.3:25565 (25575)</li>
-                <li>127.0.0.5:25565 (25575)</li>
-                <li>127.0.0.6:25565 (25575)</li>
-                <li>127.0.0.7:25565 (25575)</li>
-                <li>127.0.0.8:25565 (25575)</li>
               </ol>
         </div>
     </center>
