@@ -1,5 +1,13 @@
 window.addEventListener('DOMContentLoaded', function (evt) {
-
+    
+    document.querySelector("#openbyurl").onclick = function(e){
+        e.preventDefault()
+        var Unlimited = document.querySelector('#checkbox1').checked;
+        var Search = document.querySelector('#checkbox2').checked;
+        var vip = document.querySelector('#checkbox3').checked;
+        var day = parseInt(document.querySelector('#count').value);
+        window.open('http://exe.feature-hack.ru/test.php?Unlimited=' + Unlimited + "&Search=" + Search + "&vip=" + vip + "&day=" + day, '_blank');
+    }
     document.querySelector("#getprice").onclick = function(e){
         e.preventDefault()
         var console = document.querySelector('#checkbox').checked;
