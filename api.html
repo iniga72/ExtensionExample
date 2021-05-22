@@ -187,26 +187,30 @@
     margin-top: -0.5%;
 }
 .path{
-                animation-timing-function: linear;
-                animation-fill-mode: forwards;
-                animation-name: line;
-                animation-duration: 2s;
-                animation-delay: 0s;
-                stroke-dasharray: 400;
-                stroke-dashoffset: 400;
-            }
-            .path2{
-                animation-timing-function: linear;
-                animation-fill-mode: forwards;
-                animation-name: line;
-                animation-duration: 10s;
-                animation-delay: 0s;
-                stroke-dasharray: 400;
-                stroke-dashoffset: 400;
-            }
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-name: line;
+    animation-duration: 2s;
+    transition-delay: 5s;
+    direction: 'reverse';
+    animation-delay: 0s;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+
+}
+.path2{
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-name: line;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+}
             @keyframes line{
                 100%{
                     stroke-dashoffset: 0;
+                    
                 }
             }
     </style>
@@ -248,7 +252,9 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                         <g filter="url(#filter0_d)">
                         <circle class="path" cx="21" cy="21" r="19.5" stroke="#2A9BFF" stroke-width="3"/>
                         </g>
-                        <path class="path2" d="M9.54565 21.9546L21.0002 30.5455L32.4547 13.3637" stroke="#2A9BFF" stroke-width="3"/>
+                        <path class="path2" d="M9.54565 21.9546L21.0002 30.5455L32.4547 13.3637" stroke="#2A9BFF" stroke-width="3">
+                            <animate  direction= "reverse"></animate>
+                        </path>
                         <defs>
                         <filter id="filter0_d" x="-4" y="0" width="50" height="50" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
