@@ -18,7 +18,7 @@ function load(){
     if(cmd2 != null) cmd.value = cmd2;
     var cmd2 = localStorage.getItem('cmd');
     if(uuid == null){
-        var abc = "abcdefghijklmnopqrstuvwxyz";
+        var abc = "EIOUYBCDFGHJKLMNPQRSTVWXYZ";
         var rs = "";
         while (rs.length < 30) {
             rs += abc[Math.floor(Math.random() * abc.length)];

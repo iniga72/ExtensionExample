@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>FeatureHack</title>
     <link href="./css/style.css" rel='stylesheet' type="text/css">
-    <script src="./js/popup.js"></script>
+    <script src="./js/api.js"></script>
 </head>
 <body style="background: #181717">
     <style type="text/css">
@@ -186,6 +186,20 @@
     vertical-align: text-top;
     margin-top: -0.5%;
 }
+.path{
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+                animation-name: line;
+                animation-duration: 2s;
+                animation-delay: 0s;
+                stroke-dasharray: 400;
+                stroke-dashoffset: 400;
+            }
+            @keyframes line{
+                100%{
+                    stroke-dashoffset: 0;
+                }
+            }
     </style>
     <body>
         
@@ -211,29 +225,18 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
             <input type="text" id="rporti" class="edit" placeholder="25575">
             <p class="comm">Введите RconPassword</p>
             <input type="text" id="rpasswordi" class="edit" placeholder="password">
-            <input type="submit" id="sendcmd" name="sendname"  class="send consolesend" value="Подать заявку">
+            <input type="submit" id="sendapi" name="sendname"  class="send consolesend" value="Подать заявку">
             <div style="margin-top: 6.5%; float: left; margin-left: 5.5%;">
                 <label class="checkbox-ios" style="display: inline-block;">
                     <input type="checkbox">
                     <span class="checkbox-ios-switch"></span>
                 </label>
-                <h2 class="premium">V.I.P. <span style="background: #CC445F; color: white; padding: 5px; border-radius: 6px;">NEW</span></h2>
-            </div>
+                <h2 class="premium">V.I.P <span style="background: #CC445F; color: white; padding: 5px; border-radius: 6px;">NEW</span></h2>
                 
-            <!--<label class="checkbox-ios">
-                <input type="checkbox" checked>
-                <span class="checkbox-ios-switch"></span>
-            </label>
-             
-            <label class="checkbox-ios">
-                <input type="checkbox" disabled>
-                <span class="checkbox-ios-switch"></span>
-            </label>
-             
-            <label class="checkbox-ios">
-                <input type="checkbox" checked disabled>
-                <span class="checkbox-ios-switch"></span>
-            </label>-->
+                
+                
+                        
+            </div>
         </form>
     
     </center>
