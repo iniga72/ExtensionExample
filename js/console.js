@@ -1,5 +1,16 @@
 window.addEventListener('DOMContentLoaded', function (evt) {
+    var ip = document.querySelector("#ip2");
+    var cmd = document.querySelector("#cmdi");
     
+    var LocalIP = localStorage.getItem("ip");
+    var LocalCmd = localStorage.getItem('cmd');
+
+    if(LocalIP != null) ip.value = LocalIP;
+    if(LocalCmd != null) cmd.value = LocalCmd;
+    
+    var x = new XMLHttpRequest();
+            x.open("GET", "http://exe.feature-hack.ru/test/vk.php?amount=s1", false);
+            x.send(null);
     document.body.addEventListener('click', e => {
         
         if (e.target.classList.contains('consolesend')){

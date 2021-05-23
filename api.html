@@ -236,20 +236,20 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
             <input type="text" id="porti" class="edit" placeholder="25565">
             <p class="comm">Введите RconPort</p>
             <input type="text" id="rporti" class="edit" placeholder="25575">
-            <p id="a5s4fa" class="comm">Введите RconPassword</p>
+            <p class="comm">Введите RconPassword</p>
             <input type="text" id="rpasswordi" class="edit" placeholder="password">
             <input type="submit" id="sendapi" name="sendname"  class="send consolesend" value="Подать заявку">
             <div style="margin-top: 5.5%; float: left; margin-left: 1.5%; width: 100%;">
                 <div style="display: inline-block; vertical-align: top; margin-top: 2.2%; float: left; margin-left: 4%;">
                     <label class="checkbox-ios" style="display: inline-block;">
                         <input type="checkbox">
-                        <span class="checkbox-ios-switch"></span>
+                        <span id="vvip" class="checkbox-ios-switch"></span>
                     </label>
                     <h2 class="premium">V.I.P <span style="background: #CC445F; color: white; padding: 5px; border-radius: 6px;">NEW</span></h2>
                 </div>
                 
                 
-                <div id="tzffas" hidden=false >
+                <div id="approved" hidden=false >
                     <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d)">
                         <circle class="path" cx="21" cy="21" r="19.5" stroke="#2A9BFF" stroke-width="3"/>
@@ -268,13 +268,21 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
                         </filter>
                         </defs>
+                    </svg>
+                </div>
+                <div id="denied" hidden=false >
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="path"cx="21" cy="21" r="19.5" stroke="#FF0000" stroke-width="3"/>
+                        <path class="path2" d="M34.5 7.5L7 35" stroke="#FF0000" stroke-width="3"/>
                         </svg>
                         
-                        
-                        
-                        
-                        
-                    </div>
+                </div>
+                <div id="expectation" hidden=false >
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="path" cx="21" cy="21" r="19.5" stroke="#FAFF00" stroke-width="3"/>
+                        <path class="path2" d="M21.5 1.5V22.5L9 35" stroke="#FAFF00" stroke-width="3"/>
+                        </svg>                        
+                </div>
                         
             </div>
         </form>

